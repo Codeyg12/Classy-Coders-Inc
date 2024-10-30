@@ -15,6 +15,9 @@ class Employee {
   }
 
   setSalary(amount) {
+    if (amount < 0) {
+      throw new Error("Salary cannot be");
+    }
     this.#salary = amount;
   }
 
@@ -24,6 +27,11 @@ class Employee {
 
   setStatus(command) {
     this.#isHired = command === "fire" ? false : true;
+  }
+
+  promote(newPosition) {
+    this.position = newPosition;
+    this.setSalary(this.getSalary() * 1.2);
   }
 
   static getEmployees() {
