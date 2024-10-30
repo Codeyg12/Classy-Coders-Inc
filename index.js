@@ -9,7 +9,6 @@ const { SoftwareEngineer } = require("./classes/SoftwareEngineer")
 
 
 
-
 module.exports = {
     Employee,
     Manager,
